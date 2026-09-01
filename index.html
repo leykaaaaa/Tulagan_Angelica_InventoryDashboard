@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Inventory Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <div>
+                <p class="eyebrow">INVENTORY MANAGEMENT</p>
+                <h1>Product Inventory Dashboard</h1>
+                <p class="header-description">
+                    Manage, search, and monitor your product inventory with ease.
+                </p>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Summary Section -->
+        <section class="summary-section">
+
+            <div class="summary-card">
+                <div class="summary-icon">₱</div>
+                <div>
+                    <p class="summary-label">Total Inventory Value</p>
+                    <h2 id="totalInventoryValue">₱0</h2>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">!</div>
+                <div>
+                    <p class="summary-label">Low-Stock Products</p>
+                    <h2 id="lowStockCount">0</h2>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">×</div>
+                <div>
+                    <p class="summary-label">Out-of-Stock Products</p>
+                    <h2 id="outOfStockCount">0</h2>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Controls Section -->
+        <section class="controls-section">
+
+            <div class="control-group">
+                <label for="searchInput">Search Product</label>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Enter product name"
+                >
+            </div>
+
+
+            <div class="control-group">
+                <label for="categoryFilter">Category</label>
+
+                <select id="categoryFilter">
+                    <option value="All">All</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Displays">Displays</option>
+                    <option value="Storage">Storage</option>
+                    <option value="Components">Components</option>
+                </select>
+            </div>
+
+
+            <div class="button-group">
+
+                <button id="searchBtn" type="button">
+                    Search
+                </button>
+
+                <button id="resetBtn" type="button" class="reset-button">
+                    Reset
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Product Section -->
+        <section class="products-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">PRODUCT CATALOGUE</p>
+                    <h2>Products</h2>
+                </div>
+            </div>
+
+
+            <!-- No Results Message -->
+            <p id="noResultsMessage" class="no-results">
+                No products found
+            </p>
+
+
+            <!-- Product Cards -->
+            <div id="productList" class="product-list"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <p>Product Inventory Dashboard &copy; 2026</p>
+    </footer>
+
+
+    <!-- Required Module Configuration -->
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
